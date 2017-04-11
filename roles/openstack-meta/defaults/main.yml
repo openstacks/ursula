@@ -199,6 +199,18 @@ openstack_meta:
           config_dirs: /etc/nova
           config_files: /etc/nova/nova.conf
           restart: always
+      nova_placement_api:
+          ubuntu:
+            name: nova-placement-api
+            desc: OpenStack Nova Placement Service
+          rhel:
+            name: openstack-nova-placement-api
+            desc: OpenStack Nova Placement Service
+            type: notify
+            notify_access: all
+            user: nova
+            args: --uid nova --gid nova --master --emperor /etc/nova/uwsgi
+            restart: always
       nova_scheduler:
         ubuntu:
           name: nova-scheduler
