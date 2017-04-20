@@ -1,0 +1,6 @@
+---
+- name: remove stale bbg_ubuntu repo
+  file:
+    state: absent
+    path: /etc/apt/sources.list.d/apt_mirror_openstack_bbg_bbg_ubuntu_ubuntu.list
+  when: ursula_os == 'ubuntu'

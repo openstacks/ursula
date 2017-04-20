@@ -22,3 +22,6 @@
 
 - include: check_items.yml
   tags: ['precheck']
+
+- include: cleanup.yml
+  tags: ['cleanup']
