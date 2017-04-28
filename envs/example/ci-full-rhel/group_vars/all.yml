@@ -74,3 +74,6 @@ ironic:
 
 cinder:
   enabled: False
+
+cinderv2:
+  enabled: False

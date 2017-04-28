@@ -120,7 +120,10 @@
       - nova
       - neutron
       - glance
-      - cinder
+
+  - name: keystone should include Cinder OpenStack services
+    shell: . /root/stackrc; openstack service list | grep cinder
+    when: cinder.enabled|bool
 
   - name: cinder has a working api
     shell: . /root/stackrc; cinder list | grep ID
