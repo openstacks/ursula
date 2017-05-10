@@ -30,7 +30,6 @@ nova:
       config_file: libvirt.conf
       defaults: /etc/sysconfig/libvirtd
       group: libvirt
-  nova_lib_dir: "/opt/openstack/current/nova"
   enable_fatal_deprecations: True
   patches:
   compute_driver: libvirt.LibvirtDriver
@@ -87,6 +86,7 @@ nova:
         - openstack-nova-scheduler
         - openstack-nova-novncproxy
         - openstack-nova-console
+        - openstack-nova-placement-api
     compute:
       project_packages:
         - "librbd1-{{ ceph.client_version[ursula_os] }}"
