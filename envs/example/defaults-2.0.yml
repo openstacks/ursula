@@ -193,6 +193,7 @@ lvm:
 
 v7k:
   enabled: false
+  storage_pools: []
 
 cinder:
   enabled: True
