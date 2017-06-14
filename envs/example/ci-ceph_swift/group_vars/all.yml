@@ -46,7 +46,6 @@ serverspec:
 
 swift:
   enabled: True
-  allow_versions: True
   disks:
     - disk: vdb
 
