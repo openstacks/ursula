@@ -25,6 +25,30 @@ monitoring:
           path: '/var/lib/mysql'
           warning: 70
           critical: 80
+        - name: 'swift-sdb'
+          path: '/srv/node/sdb1'
+          warning: 89
+          critical: 99
+        - name: 'swift-sdc'
+          path: '/srv/node/sdc1'
+          warning: 89
+          critical: 99
+        - name: 'swift-sdd'
+          path: '/srv/node/sdd1'
+          warning: 89
+          critical: 99   
+        - name: 'swift-sde'
+          path: '/srv/node/sde1'
+          warning: 89
+          critical: 99 
+        - name: 'swift-sdf'
+          path: '/srv/node/sdf1'
+          warning: 89
+          critical: 99 
+        - name: 'swift-sdg'
+          path: '/srv/node/sdg1'
+          warning: 89
+          critical: 99
     network_interface_traffic:
       state: present
       warning: 250
